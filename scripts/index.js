@@ -14,7 +14,9 @@ function init() {
         messagingSenderId: "209158373491"
     };
     firebase.initializeApp(config);
-    console.log("JavaScript is amazing!");
+    console.log("Connected to firebase: " + firebase.app().name);
+    var defaultStorage = firebase.app().storage();
+    var defaultDatabase = firebase.app().database();
 };
 
 init();
